@@ -30,7 +30,6 @@ if ($products->num_rows > 0) {
                           </tr>";
                 }
             } else {
-                // If no products exist in the range, display a placeholder
                 echo '<tr><td colspan="3">No products available</td></tr>';
             }
             echo '</tbody></table></div>'; // Close table and responsive div
