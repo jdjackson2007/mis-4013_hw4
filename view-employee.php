@@ -38,7 +38,7 @@
    <td><?php echo $employee ['Employee_HireDate'];?></td>
    <td><?php echo $employee ['Employee_JobTitle'];?></td>
     <td>
-      
+       <?php include 'view-edit-employee.php'; ?>
     </td>
    <td>
     <form method="POST" action="employee.php" style="display:inline;">
