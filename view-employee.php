@@ -6,9 +6,7 @@
     <?php 
     include 'view-employee-new.php'
     ?>
-    <?php 
-    include 'view-edit-employee'
-    ?>
+   
     
    <div class="table-responsive">
   <table class="table">
