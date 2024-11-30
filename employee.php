@@ -10,7 +10,11 @@ if (isset([$_POST 'actionType']){
         insertEmployee($_Post['$firstName'],$_Post ['$lastName'], $_Post['$email'], $_Post['$phone'], $_Post['$hireDate'], $_Post['$jobTitle']{
                        echo '<div class="alert alert-light" role="alert">
                             New Employee Successfully added.
-                            </div>'
+                            </div>';{
+                       else '<div class="alert alert-light" role="alert">
+                            Error Adding New Employee.
+                            </div>';
+                            }
                                     }
                        Break;
     }
