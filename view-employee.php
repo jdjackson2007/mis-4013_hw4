@@ -1,11 +1,8 @@
 <div class="container">
   <div class="row align-items-center">
-    <!-- Left Column -->
     <div class="col">
       <h1>Employee</h1>
     </div>
-
-    <!-- Right Column -->
     <div class="col-auto right-content">
       <?php include 'view-new-employee.php'; ?>
     </div>
