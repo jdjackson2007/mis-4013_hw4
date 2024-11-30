@@ -12,8 +12,4 @@ function selectEmployee() {
         throw $e;
     }
 }
-
-
-
-
 ?>
