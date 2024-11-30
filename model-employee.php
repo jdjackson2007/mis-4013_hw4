@@ -52,5 +52,31 @@ function deleteEmployee($employeeID) {
         throw $e;
     }
 }
+function selectPhone() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT DISTINCT Employee_Phone FROM `mis-4013_hw3`.employee_table");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+function selectJobTitle() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT DISTINCT Employee_JobTitle FROM `mis-4013_hw3`.employee_table");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 
 ?>
