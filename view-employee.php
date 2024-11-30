@@ -2,13 +2,13 @@
   class = "row">
   <div
     class = "col">
+    <h1>Employee</h1>
   </div>
 </div>
 <div
   class = "col-auto">
   <?php include 'view-new-employee.php' ?>
   </div>
-<h1>Employee</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
