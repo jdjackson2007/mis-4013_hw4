@@ -30,7 +30,10 @@
     </div>
     <div class="mb-3">
         <label for="EmployeePhone" class="form-label">Phone Number</label>
-        <input type="tel" class="form-control" id="EmployeePhone" name="Employee_Phone" required>
+              <?php $PhoneList = selectPhone();
+                   include "employee-phone-list.php"
+              ?>
+                
     </div>
     <div class="mb-3">
         <label for="EmployeeHireDate" class="form-label">Hire Date</label>
@@ -38,7 +41,9 @@
     </div>
     <div class="mb-3">
         <label for="EmployeeJobTitle" class="form-label">Job Title</label>
-        <input type="text" class="form-control" id="EmployeeJobTitle" name="Employee_JobTitle" required>
+          <?php $PhoneList = selectJobTitle();
+                   include "employee-job-title-list.php"
+          ?>
     </div>
       <input type = "hidden" name = "actionType" value = "Add">
     <button type="submit" class="btn btn-primary">Save</button>
