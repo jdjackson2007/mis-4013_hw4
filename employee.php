@@ -6,7 +6,9 @@ include "view-header.php";
 
 if (isset([$_POST 'actionType']){
     switch ($_Post 'actionType') {
-    case "ADD" 
+    case "Add" :
+        insertEmployee($_Post['$firstName'],$_Post ['$lastName'], $_Post['$email'], $_Post['$phone'], $_Post['$hireDate'], $_Post['$jobTitle']
+                       Break;
     }
 }
 $employees = selectEmployee();
