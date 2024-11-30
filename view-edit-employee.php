@@ -8,19 +8,31 @@
       </div>
       <div class="modal-body">
         <form id="editEmployeeForm" action="update-employee.php" method="POST">
-          <input type="hidden" name="Employee_ID" id="modalEmployeeID" />
+          <input type="hidden" name="Employee_ID" id="EmployeeID" />
           <div class="mb-3">
-            <label for="modalEmployeeFirstName" class="form-label">First Name</label>
-            <input type="text" class="form-control" id="modalEmployeeFirstName" name="Employee_FirstName" required />
+            <label for="EmployeeFirstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="EmployeeFirstName" name="Employee_FirstName" required />
           </div>
           <div class="mb-3">
-            <label for="modalEmployeeLastName" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="modalEmployeeLastName" name="Employee_LastName" required />
+            <label for="EmployeeLastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="EmployeeLastName" name="Employee_LastName" required />
           </div>
           <div class="mb-3">
-            <label for="modalEmployeeEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="modalEmployeeEmail" name="Employee_Email" required />
+            <label for="EmployeeEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="EmployeeEmail" name="Employee_Email" required />
           </div>
+           <div class="mb-3">
+        <label for="EmployeePhone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="EmployeePhone" name="Employee_Phone" required>
+    </div>
+    <div class="mb-3">
+        <label for="EmployeeHireDate" class="form-label">Hire Date</label>
+        <input type="date" class="form-control" id="EmployeeHireDate" name="Employee_HireDate" required>
+    </div>
+    <div class="mb-3">
+        <label for="EmployeeJobTitle" class="form-label">Job Title</label>
+        <input type="text" class="form-control" id="EmployeeJobTitle" name="Employee_JobTitle" required>
+    </div>
           
           <button type="submit" class="btn btn-primary">Save Changes</button>
         </form>
