@@ -41,7 +41,7 @@
     </div>
     <div class="mb-3">
         <label for="EmployeeJobTitle" class="form-label">Job Title</label>
-          <?php $PhoneList = selectJobTitle();
+          <?php $JobTitleList = selectJobTitle();
                    include "employee-job-title-list.php"
           ?>
     </div>
