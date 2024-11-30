@@ -7,20 +7,9 @@
     include 'view-employee-new.php'
     ?>
    
-    
-   <div class="table-responsive">
-  <table class="table">
-    
-    <thead>
-      <tr>
-      <th>Employee ID</th>
-        <th>Employee First Name</th>
-      <th>Vendor Employee Last Name</th>
-        <th>Employee Email</th>
-      <th>Employee Phone</th>
-      <th>Employee Hire Date</th>
-        <th>Employee Job Title</th>
-      </tr>
+   <head>
+     
+   </head>
      
  
       <tbody>
