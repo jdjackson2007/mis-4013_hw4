@@ -1,12 +1,14 @@
 <div class="container">
-  <div class="row align-items-center">
-    <!-- Left Column: Heading -->
+  <!-- Title Section -->
+  <div class="row">
     <div class="col">
-      <h1>Category</h1>
+      <h1 class="text-center">Category</h1> <!-- Center the title, or use text-left/right as needed -->
     </div>
-    
-    <!-- Right Column: Table -->
-    <div class="col-auto">
+  </div>
+
+  <!-- Table Section -->
+  <div class="row">
+    <div class="col">
 <div class="table-responsive">
   <table class="table">
     <thead>
