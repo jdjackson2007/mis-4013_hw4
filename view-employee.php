@@ -1,4 +1,14 @@
 <h1>Employee</h1>
+<div
+  class = "row">
+  <div
+    class = "col">
+  </div>
+</div>
+<div
+  class = "col-auto">
+  <?php include 'view-new-employee.php' ?>
+  </div>
 <div class="table-responsive">
   <table class="table">
     <thead>
