@@ -1,5 +1,4 @@
-<?php
-foreach ($employees as $employee) { ?>
+
   <!-- Button to Open Edit Modal -->
   <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editEmployeeModal<?php echo $employee['employee_id']; ?>">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
