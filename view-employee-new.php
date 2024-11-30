@@ -40,6 +40,7 @@
         <label for="EmployeeJobTitle" class="form-label">Job Title</label>
         <input type="text" class="form-control" id="EmployeeJobTitle" name="Employee_JobTitle" required>
     </div>
+      <input type = "hidden" name = "actionType" value = "Add">
     <button type="submit" class="btn btn-primary">Save</button>
 </form>
 
