@@ -1,15 +1,16 @@
-<div class="row">
-  <div class="col">
-    <h1>Employee</h1>
-  </div>
-  <div class="auto-col">
-    <?php 
-    include 'view-employee-new.php'
-    ?>
-   
-   <head>
-     
-   </head>
+<h1>Employee</h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Employee ID</th>
+        <th>Employee First Name</th>
+      <th>Vendor Employee Last Name</th>
+        <th>Employee Email</th>
+      <th>Employee Phone</th>
+      <th>Employee Hire Date</th>
+        <th>Employee Job Title</th>
+      </tr>
      
  
       <tbody>
@@ -33,8 +34,3 @@
       </tbody>
      </table>
 </div>
-
-view-footer.php
-</div>
-  </body>
-</html>
