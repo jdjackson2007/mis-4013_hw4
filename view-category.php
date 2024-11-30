@@ -1,4 +1,12 @@
-<h1>Category</h1>
+<div class="container">
+  <div class="row align-items-center">
+    <!-- Left Column: Heading -->
+    <div class="col">
+      <h1>Category</h1>
+    </div>
+    
+    <!-- Right Column: Table -->
+    <div class="col-auto">
 <div class="table-responsive">
   <table class="table">
     <thead>
