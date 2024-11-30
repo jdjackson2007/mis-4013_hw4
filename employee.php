@@ -54,10 +54,7 @@ if (isset($_POST['actionType'])) {
 } else {
     echo "No action specified.";
 }
-?>
-    }
-  }
-    
+       
 $employees = selectEmployee();
 include "view-employee.php";
 include "view-footer.php";
