@@ -5,9 +5,7 @@
     </svg>
 </button>
 
-
-
-<div class="modal fade" id="editEmployeeModal<?php echo $employee['employee_id']; ?> " tabindex="-1" aria-labelledby="editEmployeeModalLabel<?php echo $employee['employee_id']; ?>" aria-hidden="true">
+<div class="modal fade" id="editEmployeeModal<?php echo $employee['employee_id']; ?>" tabindex="-1" aria-labelledby="editEmployeeModalLabel<?php echo $employee['employee_id']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -15,37 +13,41 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
-  <div class="mb-3">
-   <form method = "post" action ="">
-    <div class="mb-3">
-        <label for="EmployeeFirstName<?php echo $employee['employee_id']; ?>" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="EmployeeFirstName<?php echo $employee['employee_id']; ?>" name="Employee_FirstName" value <?php echo $employee['employee_id']; ?>>
-    </div>
-    <div class="mb-3">
-        <label for="EmployeeLastName<?php echo $employee['employee_id']; ?>" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="EmployeeLastName<?php echo $employee['employee_id']; ?>" name="Employee_LastName" value <?php echo $employee['employee_id']; ?>>
-    </div>
-    <div class="mb-3">
-        <label for="EmployeeEmail<?php echo $employee['employee_id']; ?>" class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="EmployeeEmail<?php echo $employee['employee_id']; ?>" name="Employee_Email" aria-describedby="emailHelp" value <?php echo $employee['employee_id']; ?>>
-    </div>
-    <div class="mb-3">
-        <label for="EmployeePhone<?php echo $employee['employee_id']; ?>" class="form-label">Phone Number</label>
-        <input type="tel" class="form-control" id="EmployeePhone<?php echo $employee['employee_id']; ?>" name="Employee_Phone" value <?php echo $employee['employee_id']; ?>>
-    </div>
-    <div class="mb-3">
-        <label for="EmployeeHireDate<?php echo $employee['employee_id']; ?>" class="form-label">Hire Date</label>
-        <input type="date" class="form-control" id="EmployeeHireDate<?php echo $employee['employee_id']; ?>" name="Employee_HireDate" value <?php echo $employee['employee_id']; ?>>
-    </div>
-    <div class="mb-3">
-        <label for="EmployeeJobTitle<?php echo $employee['employee_id']; ?>" class="form-label">Job Title</label>
-        <input type="text" class="form-control" id="EmployeeJobTitle<?php echo $employee['employee_id']; ?>" name="Employee_JobTitle" value <?php echo $employee['employee_id']; ?>>
-    </div>
-      <input type = "hidden" name = "employee_id" value = "<?php echo $employee['employee_id']; ?>">
-      <input type = "hidden" name = "actionType" value = "Edit">
-    <button type="submit" class="btn btn-primary">Save</button>
-</form>
+        <form method="post" action="employee.php">
+          <div class="mb-3">
+            <label for="EmployeeFirstName<?php echo $employee['employee_id']; ?>" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="EmployeeFirstName<?php echo $employee['employee_id']; ?>" name="Employee_FirstName" value="<?php echo htmlspecialchars($employee['Employee_FirstName']); ?>" required>
+          </div>
+          <div class="mb-3">
+            <label for="EmployeeLastName<?php echo $employee['employee_id']; ?>" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="EmployeeLastName<?php echo $employee['employee_id']; ?>" name="Employee_LastName" value="<?php echo htmlspecialchars($employee['Employee_LastName']); ?>" required>
+          </div>
+          <div class="mb-3">
+            <label for="EmployeeEmail<?php echo $employee['employee_id']; ?>" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="EmployeeEmail<?php echo $employee['employee_id']; ?>" name="Employee_Email" value="<?php echo htmlspecialchars($employee['Employee_Email']); ?>" required>
+          </div>
+          <div class="mb-3">
+            <label for="EmployeePhone<?php echo $employee['employee_id']; ?>" class="form-label">Phone Number</label>
+            <?php 
+              $PhoneList = selectPhone(); 
+              include "employee-phone-list.php"; 
+            ?>
+          </div>
+          <div class="mb-3">
+            <label for="EmployeeHireDate<?php echo $employee['employee_id']; ?>" class="form-label">Hire Date</label>
+            <input type="date" class="form-control" id="EmployeeHireDate<?php echo $employee['employee_id']; ?>" name="Employee_HireDate" value="<?php echo htmlspecialchars($employee['Employee_HireDate']); ?>" required>
+          </div>
+          <div class="mb-3">
+            <label for="EmployeeJobTitle<?php echo $employee['employee_id']; ?>" class="form-label">Job Title</label>
+            <?php 
+              $JobTitleList = selectJobTitle(); 
+              include "employee-job-title-list.php"; 
+            ?>
+          </div>
+          <input type="hidden" name="employee_id" value="<?php echo $employee['employee_id']; ?>">
+          <input type="hidden" name="actionType" value="Edit">
+          <button type="submit" class="btn btn-primary">Save</button>
+        </form>
       </div>
     </div>
   </div>
