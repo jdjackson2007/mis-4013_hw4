@@ -54,6 +54,34 @@ if (isset($_POST['actionType'])) {
 } else {
     echo "No action specified.";
 }
+if (isset($_POST['actionType'])) {
+    try {
+        $actionType = $_POST['actionType'];
+        switch ($actionType) {
+            case "add":
+                // Existing code...
+                $message = "Employee added successfully!";
+                break;
+
+            case "edit":
+                // Existing code...
+                $message = "Employee updated successfully!";
+                break;
+
+            case "delete":
+                // Existing code...
+                $message = "Employee deleted successfully!";
+                break;
+
+            default:
+                $message = "Invalid action type!";
+        }
+    } catch (Exception $e) {
+        $message = "Error: " . $e->getMessage();
+    }
+    echo "<script>alert('$message'); window.location.href='employee.php';</script>";
+    exit();
+}
        
 $employees = selectEmployee();
 include "view-employee.php";
