@@ -44,10 +44,25 @@
               include "employee-job-title-list.php"; 
             ?>
           </div>
-          <input type="hidden" name="employee_id" value="<?php echo $employee['employee_id']; ?>">
+          <input type="hidden" name="Employee_ID" value="<?php echo $employee['Employee_ID']; ?>">
           <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
+<form method="post" action="employee.php" onsubmit="return validateForm(this);" novalidate>
+    <!-- Fields... -->
+</form>
+<script>
+function validateForm(form) {
+    // Example validation: Ensure fields are not empty
+    if (form.Employee_FirstName.value.trim() === '') {
+        alert("First Name cannot be empty.");
+        return false;
+    }
+    // Add more validations as needed
+    return true;
+}
+</script>
+
       </div>
     </div>
   </div>
