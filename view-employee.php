@@ -43,7 +43,7 @@
    <td>
     <form method="POST" action="employee.php" style="display:inline;">
         <input type="hidden" name="actionType" value="delete">
-        <input type="hidden" name="employee_id" value="<?php echo $employee['employee_id']; ?>">
+        <input type="hidden" name="Employee_ID" value="<?php echo $employee['Employee_ID']; ?>">
         <button type="submit" class="btn btn-danger btn-sm" title="Delete Employee">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
