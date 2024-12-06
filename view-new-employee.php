@@ -42,7 +42,7 @@
               include "employee-job-title-list.php";
             ?>
           </div>
-          <input type="hidden" name="actionType" value="Add">
+          <input type="hidden" name="actionType" value="add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
